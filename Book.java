@@ -46,6 +46,11 @@ public class Book {
     return this.costPrice;
   }
 
+  // Getting the sell price of the book
+  public double getSellPrice() {
+    return this.sellPrice;
+  }
+
   // Getter for if it is sold
   public boolean isSold() {
     return this.sold;
@@ -54,6 +59,17 @@ public class Book {
   // Setting sold status
   public void sell() {
     this.sold = true;
+  }
+
+  // Reduce the selling price (discount)
+  public void reduceSellPrice(double deltaAmount) {
+    // Check for sell price dropping below cost price
+    if (this.sellPrice - deltaAmount < this.costPrice) {
+      this.sellPrice = this.costPrice;
+    } else {
+      this.sellPrice -= deltaAmount;
+    }
+
   }
 
 }

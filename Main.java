@@ -46,18 +46,22 @@ class Main {
       System.out.println("Search by ID didn't find anything.");
     }
 
-    // // Reduce the selling prices of these books
-    // phil.reduceSellPrice(1.1);
-    // hp2a.reduceSellPrice(50);
-
     // Try to sell a Book
     boolean success = shop.sellBook(3);
     if (success) {
       System.out.println("Sold book: " + result.getTitle());
       // Philosophy 101 (ID 3)
     } else {
-      System.out.println("Could not sell: " + result);
+      System.out.println("Could not sell: " + result.getTitle());
     }
+    System.out.println();
+
+    // Reduce the selling prices of these books
+    phil.reduceSellPrice(1.1);
+    hp2a.reduceSellPrice(50);
+    System.out.println("Reduced Prices:");
+    System.out.println("$" + phil.getSellPrice()); // 14.89
+    System.out.println("$" + hp2a.getSellPrice()); // 11.50
     System.out.println();
 
     // // Search for a Book that contains the specified keyword
