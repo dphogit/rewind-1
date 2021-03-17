@@ -79,6 +79,11 @@ class Main {
       System.out.println("Could not find something with that keyword.");
     }
 
+    // Check for oldest book
+    System.out.println();
+    System.out.println("Oldest Book: " + Book.getOldestBookYear()); // 1997
+    System.out.println();
+
     // System.out.println("At the end of the day, balance is $" +
     // shop.getCashBalance());
   }

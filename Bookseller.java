@@ -14,6 +14,11 @@ public class BookSeller {
     this.collection = new ArrayList<>();
   }
 
+  // Get shop name
+  public String getShopName() {
+    return this.shopName;
+  }
+
   // Get the cash balance
   public double getCashBalance() {
     return this.cashBalance;

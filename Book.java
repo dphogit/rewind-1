@@ -9,20 +9,30 @@ public class Book {
   private int id;
   private boolean sold;
 
-  // Determines the Id for each Book Instance (increments everytime a new Book
-  // object is instantiated.)
+  // Static Fields
   private static int nextId = 0;
+  private static int oldestBookYear = 0;
 
   // Constructor
   public Book(String title, String author, int year, double costPrice, double sellPrice) {
     this.title = title;
     this.author = author;
-    this.year = year;
     this.costPrice = costPrice;
     this.sellPrice = sellPrice;
+    this.sold = false;
+
     this.id = nextId;
     nextId++;
-    this.sold = false;
+
+    // Assume no books are written in the year 0 or before
+    this.year = year;
+    if (oldestBookYear == 0) {
+      // Initialise the first book
+      oldestBookYear = year;
+    } else if (year < oldestBookYear) {
+      // For every book after the first, check if it is older and set.
+      oldestBookYear = year;
+    }
   }
 
   // Overiding the .toString() method
@@ -58,6 +68,11 @@ public class Book {
   public int hashCode() {
     // Not the best hash function as Id is unique for every book but not important.
     return this.id;
+  }
+
+  // Static method that gets the oldest book
+  public static int getOldestBookYear() {
+    return oldestBookYear;
   }
 
   // Get the Id of the Book instance
