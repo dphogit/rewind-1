@@ -33,18 +33,18 @@ class Main {
     shop.purchaseStock(hp1);
     shop.purchaseStock(hp2a);
     shop.purchaseStock(phil);
-    System.out.println("Balance after purchasing more stock: $" + shop.getCashBalance()); // 90.5 - 10.5 - 11.5 - 8.75 =
-                                                                                          // 59.75
+    System.out.println("Balance after purchasing more stock: $" + shop.getCashBalance()); // 59.75
     System.out.println("Total books: " + shop.totalNumberOfBooks()); // 4
     System.out.println();
 
-    // // Scan a barcode to find a Book
-    // Book result = shop.scanByID(3);
-    // if (result != null) {
-    // System.out.println("Search by ID found: " + result);
-    // } else {
-    // System.out.println("Search by ID didn't find anything.");
-    // }
+    // Scan a barcode to find a Book
+    Book result = shop.scanByID(3);
+    if (result != null) {
+      System.out.println("Search by ID found: " + result.getTitle());
+      // Philosophy 101
+    } else {
+      System.out.println("Search by ID didn't find anything.");
+    }
 
     // // Reduce the selling prices of these books
     // phil.reduceSellPrice(1.1);

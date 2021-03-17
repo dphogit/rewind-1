@@ -26,7 +26,17 @@ public class BookSeller {
 
   // Returning the number of books in the collection
   public int totalNumberOfBooks() {
-    return collection.size();
+    return this.collection.size();
+  }
+
+  // Attempts to find a book in the collection
+  public Book scanByID(int id) {
+    for (Book book : this.collection) {
+      if (book.getId() == id) {
+        return book;
+      }
+    }
+    return null; // Not Found
   }
 
 }

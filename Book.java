@@ -34,6 +34,11 @@ public class Book {
     return this.id;
   }
 
+  // Get the title
+  public String getTitle() {
+    return this.title;
+  }
+
   // Get the cost price of the book
   public double getCostPrice() {
     return this.costPrice;
