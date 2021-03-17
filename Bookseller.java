@@ -14,20 +14,25 @@ public class BookSeller {
     this.collection = new ArrayList<>();
   }
 
-  // Getter method for the cash balance
+  // Get the cash balance
   public double getCashBalance() {
     return this.cashBalance;
   }
 
-  // Purchasing stock (books)
-  public void purchaseStock(Book book) {
-    this.cashBalance -= book.getCostPrice();
-    this.collection.add(book);
-  }
-
-  // Returning the number of books in the collection
+  // Get the number of books in the collection
   public int totalNumberOfBooks() {
     return this.collection.size();
+  }
+
+  // Get the number of unsold books
+  public int totalNumberOfUnsoldBooks() {
+    int numUnsoldBooks = 0;
+    for (Book book : this.collection) {
+      if (!book.isSold()) {
+        numUnsoldBooks++;
+      }
+    }
+    return numUnsoldBooks;
   }
 
   // Attempts to find a book in the collection
@@ -38,6 +43,12 @@ public class BookSeller {
       }
     }
     return null; // Not Found
+  }
+
+  // Purchasing stock (books)
+  public void purchaseStock(Book book) {
+    this.cashBalance -= book.getCostPrice();
+    this.collection.add(book);
   }
 
   // Sell a book

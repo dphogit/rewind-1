@@ -64,6 +64,11 @@ class Main {
     System.out.println("$" + hp2a.getSellPrice()); // 11.50
     System.out.println();
 
+    // Check for number of unsold books
+    System.out.println("No. Unsold Books:");
+    System.out.println(shop.totalNumberOfUnsoldBooks()); // 3
+    System.out.println();
+
     // // Search for a Book that contains the specified keyword
     // result = shop.searchKeyword("SeCReTs");
     // if (result != null) {
