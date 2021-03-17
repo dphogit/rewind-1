@@ -7,15 +7,19 @@ class Main {
     System.out.println();
 
     // Create a few Book instances
-    Book hp1 = new Book("Harry Potter Philosopher Stone", "J. K. Rowling", 1997, 10.50, 29.95); // ID: 0
-    Book hp2a = new Book("Harry Potter Chamber Secrets", "J. K. Rowling", 1998, 11.50, 31.95); // ID: 1
-    Book hp2b = new Book("Harry Potter Chamber Secrets", "J. K. Rowling", 1998, 9.50, 31.95); // ID: 2
+    Book hp1 = new Book("Harry Potter Philosopher Stone", "J. K. Rowling", 1997, 10.50, 29.95);
+    Book hp2a = new Book("Harry Potter Chamber Secrets", "J. K. Rowling", 1998, 11.50, 31.95);
+    Book hp2b = new Book("Harry Potter Chamber Secrets", "J. K. Rowling", 1998, 9.50, 31.95);
     Book phil = new Book("Philosophy 101", "Paul Kleinman", 2013, 8.75, 15.99);
 
-    System.out.println(hp1.getId());
-    System.out.println(hp2a.getId());
-    System.out.println(hp2b.getId());
-    System.out.println(phil.getId());
+    // Check for increment ID
+    System.out.println(hp1.getId()); // ID: 0
+    System.out.println(hp2a.getId()); // ID: 1
+    System.out.println(hp2b.getId()); // ID: 2
+    System.out.println(phil.getId()); // ID: 3
+
+    // Check for Override
+    System.out.println(hp1.toString()); // 'Book'
 
     // // BookSeller purchases one of the Books as stock
     // shop.purchaseStock(hp2b);

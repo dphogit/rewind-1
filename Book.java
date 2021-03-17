@@ -28,4 +28,10 @@ public class Book {
     return this.id;
   }
 
+  // Overiding the .toString() method
+  @Override
+  public String toString() {
+    return this.getClass().getName();
+  }
+
 }
