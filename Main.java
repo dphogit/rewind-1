@@ -41,7 +41,7 @@ class Main {
     Book result = shop.scanByID(3);
     if (result != null) {
       System.out.println("Search by ID found: " + result.getTitle());
-      // Philosophy 101
+      // Philosophy 101 (ID 3)
     } else {
       System.out.println("Search by ID didn't find anything.");
     }
@@ -50,14 +50,15 @@ class Main {
     // phil.reduceSellPrice(1.1);
     // hp2a.reduceSellPrice(50);
 
-    // // Try to sell a Book
-    // boolean success = shop.sellBook(3);
-    // if (success) {
-    // System.out.println("Sold book: " + result);
-    // } else {
-    // System.out.println("Could not sell: " + result);
-    // }
-    // System.out.println();
+    // Try to sell a Book
+    boolean success = shop.sellBook(3);
+    if (success) {
+      System.out.println("Sold book: " + result.getTitle());
+      // Philosophy 101 (ID 3)
+    } else {
+      System.out.println("Could not sell: " + result);
+    }
+    System.out.println();
 
     // // Search for a Book that contains the specified keyword
     // result = shop.searchKeyword("SeCReTs");

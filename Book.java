@@ -7,6 +7,7 @@ public class Book {
   private double costPrice;
   private double sellPrice;
   private int id;
+  private boolean sold;
 
   // Determines the Id for each Book Instance (increments everytime a new Book
   // object is instantiated.)
@@ -21,6 +22,7 @@ public class Book {
     this.sellPrice = sellPrice;
     this.id = nextId;
     nextId++;
+    this.sold = false;
   }
 
   // Overiding the .toString() method
@@ -42,6 +44,16 @@ public class Book {
   // Get the cost price of the book
   public double getCostPrice() {
     return this.costPrice;
+  }
+
+  // Getter for if it is sold
+  public boolean isSold() {
+    return this.sold;
+  }
+
+  // Setting sold status
+  public void sell() {
+    this.sold = true;
   }
 
 }
