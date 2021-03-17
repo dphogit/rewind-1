@@ -66,4 +66,14 @@ public class BookSeller {
     return true;
   }
 
+  // Search for keywords and return the matching book (first one only).
+  public Book searchKeyword(String keyword) {
+    for (Book book : this.collection) {
+      if (book.getTitle().toLowerCase().contains(keyword.toLowerCase())) {
+        return book;
+      }
+    }
+    return null; // No book found
+  }
+
 }

@@ -69,10 +69,12 @@ class Main {
     System.out.println(shop.totalNumberOfUnsoldBooks()); // 3
     System.out.println();
 
-    // // Search for a Book that contains the specified keyword
-    // result = shop.searchKeyword("SeCReTs");
-    // if (result != null) {
-    // System.out.println("Search by keyword found: " + result);
+    // Search for a Book that contains the specified keyword
+    result = shop.searchKeyword("SeCReTs");
+    if (result != null) {
+      System.out.println("Search by keyword 'SeCReTs' found: " + result.getTitle());
+      // Harry Potter Chamber Secrets
+    }
 
     // int num = shop.sellAllCopiesOfBook(result);
     // System.out.println("Sold " + num + " copies.");
