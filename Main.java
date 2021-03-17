@@ -1,5 +1,7 @@
 class Main {
 
+  // TODO Fix money to 2dp
+
   public static void main(String[] args) {
     // Create BookSeller instance and print details
     BookSeller shop = new BookSeller("Books 'r' Us", 100.0);
@@ -84,8 +86,7 @@ class Main {
     System.out.println("Oldest Book: " + Book.getOldestBookYear()); // 1997
     System.out.println();
 
-    // System.out.println("At the end of the day, balance is $" +
-    // shop.getCashBalance());
+    System.out.println("At the end of the day, balance is $" + shop.getCashBalance());
   }
 
 }
