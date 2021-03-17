@@ -1,3 +1,31 @@
 public class Book {
 
+  // Fields
+  private String title;
+  private String author;
+  private int year;
+  private double costPrice;
+  private double sellPrice;
+  private int id;
+
+  // Determines the Id for each Book Instance (increments everytime a new Book
+  // object is instantiated.)
+  private static int nextId = 0;
+
+  // Constructor
+  public Book(String title, String author, int year, double costPrice, double sellPrice) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
+    this.costPrice = costPrice;
+    this.sellPrice = sellPrice;
+    this.id = nextId;
+    nextId++;
+  }
+
+  // Get the Id of the Book instance
+  public int getId() {
+    return this.id;
+  }
+
 }
