@@ -72,15 +72,12 @@ class Main {
     // Search for a Book that contains the specified keyword
     result = shop.searchKeyword("SeCReTs");
     if (result != null) {
-      System.out.println("Search by keyword 'SeCReTs' found: " + result.getTitle());
-      // Harry Potter Chamber Secrets
+      System.out.println("Search by keyword 'SeCReTs' found: " + result.getTitle()); // Harry Potter Chamber Secrets
+      int num = shop.sellAllCopiesOfBook(result);
+      System.out.println("Sold " + num + " copies."); // 2
+    } else {
+      System.out.println("Could not find something with that keyword.");
     }
-
-    // int num = shop.sellAllCopiesOfBook(result);
-    // System.out.println("Sold " + num + " copies.");
-    // } else {
-    // System.out.println("Could not find something with that keyword." );
-    // }
 
     // System.out.println("At the end of the day, balance is $" +
     // shop.getCashBalance());

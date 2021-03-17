@@ -66,7 +66,7 @@ public class BookSeller {
     return true;
   }
 
-  // Search for keywords and return the matching book (first one only).
+  // Search for keywords and return matched book (first one + case insensitive).
   public Book searchKeyword(String keyword) {
     for (Book book : this.collection) {
       if (book.getTitle().toLowerCase().contains(keyword.toLowerCase())) {
@@ -74,6 +74,22 @@ public class BookSeller {
       }
     }
     return null; // No book found
+  }
+
+  // Sell all copies of a book given a Book object parameter
+  public int sellAllCopiesOfBook(Book bookToSell) {
+    int count = 0;
+    for (Book book : this.collection) {
+      // Check if the current book and the book to sell are the same
+      if (book.equals(bookToSell)) {
+        // If the same, attempt to sell it => increment count if so.
+        boolean successful = this.sellBook(book.getId());
+        if (successful) {
+          count++;
+        }
+      }
+    }
+    return count;
   }
 
 }
