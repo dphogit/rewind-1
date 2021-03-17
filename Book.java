@@ -23,15 +23,20 @@ public class Book {
     nextId++;
   }
 
+  // Overiding the .toString() method
+  @Override
+  public String toString() {
+    return this.getClass().getName();
+  }
+
   // Get the Id of the Book instance
   public int getId() {
     return this.id;
   }
 
-  // Overiding the .toString() method
-  @Override
-  public String toString() {
-    return this.getClass().getName();
+  // Get the cost price of the book
+  public double getCostPrice() {
+    return this.costPrice;
   }
 
 }

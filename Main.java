@@ -17,25 +17,26 @@ class Main {
     System.out.println(hp2a.getId()); // ID: 1
     System.out.println(hp2b.getId()); // ID: 2
     System.out.println(phil.getId()); // ID: 3
+    System.out.println();
 
     // Check for Override
     System.out.println(hp1.toString()); // 'Book'
+    System.out.println();
 
-    // // BookSeller purchases one of the Books as stock
-    // shop.purchaseStock(hp2b);
-    // System.out.println("Balance after purchasing stock: $" +
-    // shop.getCashBalance());
-    // System.out.println("Total books: " + shop.totalNumberOfBooks());
-    // System.out.println();
+    // BookSeller purchases one of the Books as stock
+    shop.purchaseStock(hp2b);
+    System.out.println("Balance after purchasing stock: $" + shop.getCashBalance()); // 100 - 9.50 = 90.50
+    System.out.println("Total books: " + shop.totalNumberOfBooks()); // 1 book
+    System.out.println();
 
-    // // BookSeller purchases more Books as stock
-    // shop.purchaseStock(hp1);
-    // shop.purchaseStock(hp2a);
-    // shop.purchaseStock(phil);
-    // System.out.println("Balance after purchasing more stock: $" +
-    // shop.getCashBalance());
-    // System.out.println("Total books: " + shop.totalNumberOfBooks());
-    // System.out.println();
+    // BookSeller purchases more Books as stock
+    shop.purchaseStock(hp1);
+    shop.purchaseStock(hp2a);
+    shop.purchaseStock(phil);
+    System.out.println("Balance after purchasing more stock: $" + shop.getCashBalance()); // 90.5 - 10.5 - 11.5 - 8.75 =
+                                                                                          // 59.75
+    System.out.println("Total books: " + shop.totalNumberOfBooks()); // 4
+    System.out.println();
 
     // // Scan a barcode to find a Book
     // Book result = shop.scanByID(3);
